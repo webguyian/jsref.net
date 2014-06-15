@@ -1,67 +1,93 @@
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
+  background: #333;
   margin: 0;
   padding: 0;
   color: #333;
-  font: 400 16px/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 300 16px/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3 {
-  font-weight: 400;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 
 .container {
-  max-width: 55em;
+  max-width: 60em;
   margin: 0 auto;
 }
 
 .hero-unit {
   background-color: #d74343;
-  margin-bottom: 80px;
-  padding: 200px 0;
+  background: linear-gradient(to top left, #C43333 0%, #C43333 50%, #d74343 50%, #d74343 100%);
+  margin-bottom: 40px;
+  padding: 40px 20px;
 }
 
 .hero-unit h1 {
   margin-top: 0;
   color: #fff;
-  font-size: 3em;
+  font-size: 2em;
 }
 
-.hero-unit p {
+.hero-unit .lead {
   color: #fff;
+}
+
+.row {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .panel {
   position: relative;
-  width: 285px;
+  display: block;
+  width: 90%;
   height: 180px;
-  margin: 0 0.75em 0.75em 0;
+  margin: 0 auto 1em;
   padding: 1em;
-  float: left;
   background-color: #d3d3d3;
   text-align: right;
-}
-
-.row .panel:last-child {
-  margin-right: 0;
+  vertical-align: top;
 }
 
 .panel > h2 {
-  position: absolute;
-  right: 0.75em;
-  top: 3em;
   color: #fff;
   font-size: 1.25em;
+  margin-top: 70px;
 }
 
 .panel-1 { background-color: #d74343; }
-.panel-2 { background-color: #FDB375; }
-.panel-3 { background-color: #BADA7C; }
+.panel-2 { background-color: #EC8F40; }
+.panel-3 { background-color: #95C23F; }
 .panel-4 { background-color: #4FBDC7; }
 .panel-5 { background-color: #B38DD5; }
 .panel-6 { background-color: #5C5C5C; }
+
+@media (min-width: 50em) {
+
+  .hero-unit {
+    margin-bottom: 80px;
+    padding: 200px 0;
+  }
+
+  .hero-unit h1 {
+    font: 300 3.5em/1.25 'Open Sans Condensed', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  .hero-unit .lead {
+    font-size: 1.25em;
+  }
+
+  .panel {
+    display: inline-block;
+    width: 32%;
+    margin: 0.25em 0.25em 0.5em;
+  }
+
+}
