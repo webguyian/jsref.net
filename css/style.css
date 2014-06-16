@@ -4,16 +4,31 @@
 }
 
 body {
-  background: #333;
+  background: #443C3C;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #fff;
   font: 300 16px/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
+}
+
+.heading {
+  font-family: 'Open Sans Condensed', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  border-bottom: 1px dotted;
 }
 
 .container {
@@ -24,18 +39,15 @@ h1, h2, h3 {
 .hero-unit {
   background-color: #d74343;
   background: linear-gradient(to top left, #C43333 0%, #C43333 50%, #d74343 50%, #d74343 100%);
-  margin-bottom: 40px;
   padding: 40px 20px;
 }
 
-.hero-unit h1 {
-  margin-top: 0;
-  color: #fff;
-  font-size: 2em;
+.hero-unit .lead {
+  margin-bottom: 0;
 }
 
-.hero-unit .lead {
-  color: #fff;
+.main {
+  padding: 100px 0;
 }
 
 .row {
@@ -48,7 +60,6 @@ h1, h2, h3 {
   position: relative;
   display: block;
   width: 90%;
-  height: 180px;
   margin: 0 auto 1em;
   padding: 1em;
   background-color: #d3d3d3;
@@ -56,28 +67,55 @@ h1, h2, h3 {
   vertical-align: top;
 }
 
-.panel > h2 {
-  color: #fff;
+.panel h2 {
   font-size: 1.25em;
-  margin-top: 70px;
+  margin-top: 25px;
 }
 
-.panel-1 { background-color: #d74343; }
-.panel-2 { background-color: #EC8F40; }
-.panel-3 { background-color: #95C23F; }
-.panel-4 { background-color: #4FBDC7; }
-.panel-5 { background-color: #B38DD5; }
-.panel-6 { background-color: #5C5C5C; }
+.bg-1 { background-color: #d74343; }
+.bg-2 { background-color: #EC8F40; }
+.bg-3 { background-color: #95C23F; }
+.bg-4 { background-color: #4FBDC7; }
+.bg-5 { background-color: #B38DD5; }
+.bg-6 { background-color: #5C5C5C; }
+
+.banner {
+  padding: 80px 0;
+}
+
+.banner .heading {
+  margin-bottom: 0;
+}
+
+.article {
+  background: #F0F0F0;
+  margin: 80px auto;
+  padding: 30px 60px;
+  color: #333;
+}
+
+.article .title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.article .title + p {
+  margin-top: 0;
+}
+
+.article .site-link {
+  color: #397DB9;
+  text-transform: uppercase;
+}
 
 @media (min-width: 50em) {
 
   .hero-unit {
-    margin-bottom: 80px;
     padding: 200px 0;
   }
 
   .hero-unit h1 {
-    font: 300 3.5em/1.25 'Open Sans Condensed', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 3.5em;
   }
 
   .hero-unit .lead {
@@ -88,6 +126,14 @@ h1, h2, h3 {
     display: inline-block;
     width: 32%;
     margin: 0.25em 0.25em 0.5em;
+  }
+
+  .panel h2 {
+    margin-top: 70px;
+  }
+
+  .banner .heading {
+    font-size: 3em;
   }
 
 }
