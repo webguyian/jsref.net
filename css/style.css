@@ -31,6 +31,10 @@ a:hover, a:focus {
   border-bottom: 1px dotted;
 }
 
+p {
+  margin-top: 0;
+}
+
 .container {
   max-width: 60em;
   margin: 0 auto;
@@ -79,6 +83,30 @@ a:hover, a:focus {
 .bg-5 { background-color: #B38DD5; }
 .bg-6 { background-color: #5C5C5C; }
 
+.section-overview .banner {
+  background: linear-gradient(to right, #C43333 75%, #d74343 75%);
+}
+
+.section-scope .banner {
+  background: linear-gradient(to right, #EC8F40 75%, #E9A061 75%);
+}
+
+.section-core .banner {
+  background: linear-gradient(to right, #95C23F 75%, #ADD364 75%);
+}
+
+.section-inheritance .banner {
+  background: linear-gradient(to right, #4FBDC7 75%, #65CAD3 75%);
+}
+
+.section-closures .banner {
+  background: linear-gradient(to right, #B38DD5 75%, #C298E7 75%);
+}
+
+.section-dom .banner {
+  background: linear-gradient(to right, #5C5C5C 75%, #696969 75%);
+}
+
 .banner {
   padding: 80px 0;
 }
@@ -100,7 +128,7 @@ a:hover, a:focus {
 }
 
 .article .title + p {
-  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .article .site-link {
