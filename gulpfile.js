@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
+    imagemin = require('gulp-imagemin'),
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
     useref = require('gulp-useref'),
@@ -36,6 +37,13 @@ gulp.task('html', function() {
   .pipe(notify({ message: 'HTML task complete' }));
 });
 
-gulp.task('default', ['css', 'js', 'html'], function() {
+gulp.task('img', function() {
+  return gulp.src('src/img/*')
+  .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+  .pipe(gulp.dest('dist/assets/img'))
+  .pipe(notify({ message: 'IMG task complete' }));
+});
+
+gulp.task('default', ['css', 'js', 'html', 'img'], function() {
 
 });
