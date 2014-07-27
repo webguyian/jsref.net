@@ -1,5 +1,4 @@
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -9,6 +8,7 @@ body {
   padding: 0;
   color: #fff;
   font: 300 16px/1.5 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-size-adjust: 100%;
 }
 
 h1, h2, h3 {
@@ -18,7 +18,7 @@ h1, h2, h3 {
 
 .heading {
   font-family: 'Open Sans Condensed', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-top: 0;
 }
 
@@ -36,6 +36,7 @@ p {
 }
 
 .container {
+  width: 90%;
   max-width: 60em;
   margin: 0 auto;
 }
@@ -43,7 +44,8 @@ p {
 .hero-unit {
   background-color: #d74343;
   background: linear-gradient(to top left, #C43333 0%, #C43333 50%, #d74343 50%, #d74343 100%);
-  padding: 40px 20px;
+  padding: 3em 1em;
+  transition: all 0.8s;
 }
 
 .hero-unit .lead {
@@ -51,7 +53,7 @@ p {
 }
 
 .main {
-  padding: 100px 0;
+  padding: 2em 0;
 }
 
 .row {
@@ -84,31 +86,31 @@ p {
 .bg-6 { background-color: #5C5C5C; }
 
 .section-overview .banner {
-  background: linear-gradient(to right, #C43333 75%, #d74343 75%);
+  background: linear-gradient(to right, #C43333 95%, #d74343 5%);
 }
 
 .section-scope .banner {
-  background: linear-gradient(to right, #EC8F40 75%, #E9A061 75%);
+  background: linear-gradient(to right, #EC8F40 95%, #E9A061 5%);
 }
 
 .section-core .banner {
-  background: linear-gradient(to right, #95C23F 75%, #ADD364 75%);
+  background: linear-gradient(to right, #95C23F 95%, #ADD364 5%);
 }
 
 .section-inheritance .banner {
-  background: linear-gradient(to right, #4FBDC7 75%, #65CAD3 75%);
+  background: linear-gradient(to right, #4FBDC7 95%, #65CAD3 5%);
 }
 
 .section-closures .banner {
-  background: linear-gradient(to right, #B38DD5 75%, #C298E7 75%);
+  background: linear-gradient(to right, #B38DD5 95%, #C298E7 5%);
 }
 
 .section-dom .banner {
-  background: linear-gradient(to right, #5C5C5C 75%, #696969 75%);
+  background: linear-gradient(to right, #5C5C5C 95%, #696969 5%);
 }
 
 .banner {
-  padding: 80px 0;
+  padding: 2em 0;
 }
 
 .banner .heading {
@@ -117,12 +119,13 @@ p {
 
 .article {
   background: #F0F0F0;
-  margin: 80px auto;
-  padding: 30px 60px;
+  margin: 2em auto;
+  padding: 1em 2em;
   color: #333;
 }
 
 .article .title {
+  font-size: 1.25em;
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -133,6 +136,7 @@ p {
 
 .article .site-link {
   color: #397DB9;
+  font-size: 0.85em;
   text-transform: uppercase;
 }
 
@@ -166,10 +170,23 @@ p {
   to { opacity: 1; }
 }
 
-@media (min-width: 50em) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+
+  .panel {
+    display: inline-block;
+    width: 32%;
+  }
+
+  .panel h2 {
+    font-size: 0.8em;
+  }
+
+}
+
+@media (min-width: 55em) {
 
   .hero-unit {
-    padding: 200px 0;
+    padding: 8em 0;
   }
 
   .hero-unit h1 {
@@ -178,6 +195,10 @@ p {
 
   .hero-unit .lead {
     font-size: 1.25em;
+  }
+
+  .main {
+    padding: 5em 0;
   }
 
   .panel {
@@ -190,8 +211,49 @@ p {
     margin-top: 70px;
   }
 
+  .section-overview .banner {
+    background: linear-gradient(to right, #C43333 75%, #d74343 75%);
+  }
+
+  .section-scope .banner {
+    background: linear-gradient(to right, #EC8F40 75%, #E9A061 75%);
+  }
+
+  .section-core .banner {
+    background: linear-gradient(to right, #95C23F 75%, #ADD364 75%);
+  }
+
+  .section-inheritance .banner {
+    background: linear-gradient(to right, #4FBDC7 75%, #65CAD3 75%);
+  }
+
+  .section-closures .banner {
+    background: linear-gradient(to right, #B38DD5 75%, #C298E7 75%);
+  }
+
+  .section-dom .banner {
+    background: linear-gradient(to right, #5C5C5C 75%, #696969 75%);
+  }
+
+  .banner {
+    padding: 5em 0;
+  }
+
   .banner .heading {
     font-size: 3em;
+  }
+
+  .article {
+    margin: 5em auto;
+    padding: 3em 4em;
+  }
+
+  .article .title {
+    font-size: 1.5em;
+  }
+
+  .article .site-link {
+    font-size: 1em;
   }
 
 }
